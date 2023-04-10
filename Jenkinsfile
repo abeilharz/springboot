@@ -1,9 +1,7 @@
 pipeline {
-    agent{
-        label 'controller'
-    }
-    triggers{
-        pollSCM ('*****')
+    agent any
+    triggers {
+        pollSCM('* * * * *')
     } 
     //agent none 
     stages{
