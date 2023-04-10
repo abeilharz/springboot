@@ -1,5 +1,11 @@
 pipeline {
-    agent none 
+    agent{
+        label 'controller'
+    }
+    triggers{
+        pollSCM ('*****')
+    } 
+    //agent none 
     stages{
         stage ('Compile'){
             agent{
